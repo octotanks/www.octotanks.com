@@ -1,0 +1,45 @@
+<h1>Create a battle!</h1>
+<form method="post">
+	<label>
+		<span>Game mode</span>
+		<input name="mode" list="mode" required />
+	</label>
+	<label>
+		<span>Arena</span>
+		<input name="arena" list="arena" required />
+	</label>
+	<label>
+		<span>Number of bots</span>
+		<input type="range" name="num" min="2" max="16" required value="2"
+			oninput="this.nextElementSibling.value=this.valueAsNumber" />
+		<output>2</output>
+	</label>
+
+	<button name="do" value="assign">Assign bots</button>
+
+	<div>
+		<ul id="botList">
+			<li data-template="bot">
+				<label>
+					<span>1</span>
+					<input name="bot[]" list="bot" />
+				</label>
+			</li>
+		</ul>
+		<button name="do" value="commence">Let battle commence!</button>
+	</div>
+
+</form>
+
+<datalist id="mode">
+	<option>octotanks/mode-deathmatch</option>
+</datalist>
+
+<datalist id="arena">
+	<option>octotanks/arena-empty</option>
+</datalist>
+
+<datalist id="bot">
+	<option>octotanks/bot-random</option>
+	<option>octotanks/bot-backandforth</option>
+</datalist>
