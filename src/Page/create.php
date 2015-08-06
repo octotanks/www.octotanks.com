@@ -1,5 +1,5 @@
 <?php
-namespace Octotanks\Page;
+namespace OctoTanks\Page;
 
 class Create extends \Gt\Page\Logic {
 
