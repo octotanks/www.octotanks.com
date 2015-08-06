@@ -2,8 +2,17 @@ body {
 	background: green;
 }
 
-input[type=range] {
-	&::after {
-		content: attr("value");
+label {
+	display: block;
+	margin-bottom: 2em;
+
+	span {
+		display: block;
 	}
+}
+
+#botList {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
