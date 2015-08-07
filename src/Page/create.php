@@ -36,8 +36,8 @@ public function do_assign($details) {
  */
 public function do_commence($details) {
 	// TODO: Check all repositories are valid.
-	var_dump($details);
-	die("Let battle commence!");
+	\Gt\Response\Headers::redirect("/battle");
+	exit;
 }
 
 }#
